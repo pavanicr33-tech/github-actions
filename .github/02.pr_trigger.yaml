@@ -1,0 +1,12 @@
+name: hello-world
+on: 
+  pull_request:
+    types: [opened, reopened]
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: |
+          cat ${{ github.event.requested_team.name == 'octo-team'}}
+          echo 'A review from octo-team was requested'
