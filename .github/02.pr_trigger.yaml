@@ -1,12 +1,13 @@
-name: pr_trigger
+name: PR trigger
+# triggers
 on: 
   pull_request:
     types: [opened, reopened]
-jobs:
-  my-job:
-    runs-on: ubuntu-latest
+jobs: # stages
+  my-job: # stage
+    runs-on: ubuntu-latest # agent, ubuntu-latest is github hosted runner
     steps:
-      - name: my-step
+      - name: event triggered data
         run: |
-          cat ${{ github.event.requested_team.name == 'octo-team'}}
-          echo 'A review from octo-team was requested'
+          cat "$GITHUB_EVENT_PATH"
+          echo "The action was: $(jq -r '.action' "$GITHUB_EVENT_PATH")"
