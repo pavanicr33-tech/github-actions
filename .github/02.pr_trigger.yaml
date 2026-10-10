@@ -1,4 +1,4 @@
-name: hello-world
+name: pr_trigger
 on: 
   pull_request:
     types: [opened, reopened]
