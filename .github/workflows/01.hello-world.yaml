@@ -1,0 +1,10 @@
+name: hello-world
+# triggers
+on: 
+  push:
+jobs: # stages
+  my-job: # stage
+    runs-on: ubuntu-latest # agent, ubuntu-latest is github hosted runner
+    steps:
+      - name: step-1
+        run: echo "Hello World!"
