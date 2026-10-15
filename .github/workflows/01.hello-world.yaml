@@ -9,6 +9,6 @@ jobs: # stages
     steps:
       - name: step-1
         run: echo "Hello World!"
-    steps:
+    
       - name: step-2
         run: echo "Helllo world im learning devops"
