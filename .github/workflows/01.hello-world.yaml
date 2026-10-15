@@ -1,7 +1,6 @@
 name: hello-world
 # triggers
 on: 
-  push:
   workflow_dispatch:
 jobs: # stages
   my-job: # stage
