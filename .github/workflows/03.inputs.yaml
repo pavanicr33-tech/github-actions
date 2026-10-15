@@ -29,3 +29,4 @@ jobs: # stages
         run: |
           echo "${{ inputs.logLevel }}"
           echo "${{ inputs.tags }}"
+          echo "Environment: ${{ inputs.environment }}"
